@@ -25,9 +25,10 @@ db.connect((err) => {
   console.log('Conectado a la base de datos MySQL.');
 });
 
-// Rutas
-app.use('/api', apiRoutes); // Usar las rutas de la API
+// Usar las rutas de la API
+app.use('/api', apiRoutes);
 
+// Ruta principal
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
